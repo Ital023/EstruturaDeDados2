@@ -34,9 +34,9 @@ public class Tree {
         }
     }
 
-    void inOrder() {
+    //void inOrder() {
         //inOrder(root);
-    }
+    //}
 
     /*void inOrder(Node root){
         inOrder();
@@ -45,7 +45,3 @@ public class Tree {
     }*/
 }
 
-
-
-
-}
