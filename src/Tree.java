@@ -1,9 +1,7 @@
 public class Tree {
     Node root;
-
     Tree(int value){
-        root = new Node();
-        root.info = value;
+        root = new Node(value);
     }
     public Tree() {
         root = new Node();
@@ -13,23 +11,40 @@ public class Tree {
         insert(root,value);
     }
 
-   void insert(Node root,int value){
+    void insert(Node root,int value){
         if(root == null){
-            root = new Node();
-            root.info = value;
-
+            root = new Node(value);
         }else{
             if(value < root.info){
                 //Inserir a esquerda
-                insert(root.left,value);
+                if(root.left == null){
+                    root.left = new Node(value);
+                }else{
+                    insert(root.left,value);
+                }
             }else{
                 //Inserir a direita
-                insert(root.right,value);
+                if(root.right == null){
+                    root.right = new Node(value);
+                }else{
+                    insert(root.right,value);
+                }
+
             }
         }
-
-
     }
+
+    void inOrder() {
+        //inOrder(root);
+    }
+
+    /*void inOrder(Node root){
+        inOrder();
+        System.out.print();
+        inOrder(dir);
+    }*/
+}
+
 
 
 
