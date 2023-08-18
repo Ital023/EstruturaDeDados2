@@ -34,14 +34,38 @@ public class Tree {
         }
     }
 
-    //void inOrder() {
-        //inOrder(root);
-    //}
+    void inOrder() {
+        inOrder(root);
+    }
 
-    /*void inOrder(Node root){
-        inOrder();
-        System.out.print();
-        inOrder(dir);
-    }*/
+    void inOrder(Node root){
+        if(root != null){
+            inOrder(root.left);
+            System.out.print(root.info + " ");
+            inOrder(root.right);
+        }
+    }
+    void preOrder(){
+        preOrder(root);
+    }
+    void preOrder(Node root) {
+        if (root != null) {
+            System.out.print(root.info + " ");
+            preOrder(root.left);
+            preOrder(root.right);
+        }
+    }
+
+    void posOrder(){
+        posOrder(root);
+    }
+    void posOrder(Node root){
+        if (root != null) {
+            posOrder(root.left);
+            posOrder(root.right);
+            System.out.print(root.info + " ");
+        }
+    }
+
 }
 

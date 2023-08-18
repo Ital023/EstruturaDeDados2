@@ -9,9 +9,8 @@ public class Main {
         tree.insert(17);
 
 
-        System.out.println(tree.root.info);
-        System.out.println(tree.root.left.info);
-        System.out.println(tree.root.right.info);
+        //System.out.println("A raiz eh: "+ tree.root.info);
+
 
 
 
